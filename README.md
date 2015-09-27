@@ -7,7 +7,7 @@ Runs [Redis](http://redis.io) on [OpenShift](https://openshift.redhat.com/app/lo
 
 Any log output will be generated to $OPENSHIFT_REDIS_DIR/logs/redis.log
 
-Supports clustering and persistence, with monitoring from Redis Sentinel.  Does not automatically pull the latest security updates - please monitor the Redis upstream 2.6 branches.
+Supports clustering and persistence, with monitoring from Redis Sentinel.  Does not automatically pull the latest security updates - please monitor the Redis upstream 2.8 branches.
 
 
 How it Works
@@ -68,7 +68,7 @@ Always restart each gear after setting these environment variables.
 Upgrading
 ---------
 
-If you install this cartridge from source, you will be using a precompiled version of Redis 2.6 for RHEL6.  You can run the <code>bin/control update</code> script on each gear to build and update to the latest version of the Redis 2.6 tree.  
+If you install this cartridge from source, you will be using a precompiled version of Redis 2.8 for RHEL6.  You can run the <code>bin/control update</code> script on each gear to build and update to the latest version of the Redis 2.8 tree.  
 
     $ rhc ssh <yourapp> --gears 'cd redis && ./bin/control update'
     $ rhc restart-cartridge redis -a <yourapp>'
